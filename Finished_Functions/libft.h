@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: skarras <skarras@student.hive.fi>          +#+  +:+       +#+        */
+/*   By: codespace <codespace@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/29 11:49:33 by skarras           #+#    #+#             */
-/*   Updated: 2024/11/01 16:38:23 by skarras          ###   ########.fr       */
+/*   Updated: 2024/11/02 17:25:33 by codespace        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,5 +26,6 @@ void		*ft_memset(void *str, int c, size_t n);
 void		ft_bzero(void *s, size_t n);
 void		*ft_memcpy(void *dest_str, const void *src_str, size_t n);
 void		*ft_memmove(void *dest_str, const void *src_str, size_t n);
+char		*ft_substr(char const *s, unsigned int start, size_t len);
 
 #endif

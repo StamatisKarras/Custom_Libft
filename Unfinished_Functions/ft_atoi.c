@@ -19,7 +19,7 @@ int	ft_atoi(const char *str)
 	return (res);
 }
 
-int	main(int argc, char *argv[])
+/*int	main(int argc, char *argv[])
 {
 	if (argc == 2)
 	{
@@ -29,4 +29,4 @@ int	main(int argc, char *argv[])
 	else
 		printf("More inputs than expected\n");
 	return (0);
-}
+}*/

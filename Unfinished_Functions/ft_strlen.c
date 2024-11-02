@@ -12,7 +12,7 @@ size_t	ft_strlen(const char *strn)
 	return (i);
 }
 
-int	main(int argc, char *argv[])
+/*int	main(int argc, char *argv[])
 {
 	if (argc == 2)
 	{
@@ -20,4 +20,4 @@ int	main(int argc, char *argv[])
 		printf("%ld\n", strlen(argv[1]));
 	}
 	return (0);
-}
+}*/
