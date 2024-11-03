@@ -3,24 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strlcpy.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: skarras <skarras@student.hive.fi>          +#+  +:+       +#+        */
+/*   By: codespace <codespace@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/31 12:08:55 by skarras           #+#    #+#             */
-/*   Updated: 2024/10/31 13:09:30 by skarras          ###   ########.fr       */
+/*   Updated: 2024/11/03 08:19:39 by codespace        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-
-size_t	len(const char *str)
-{
-	size_t	count;
-
-	count = 0;
-	while (str[count])
-		count++;
-	return (count);
-}
 
 size_t	ft_strlcpy(char *dst, const char *src, size_t size)
 {
@@ -40,6 +30,6 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t size)
 			i++;
 		}
 		dst[i] = '\0';
-		return (len(src));
+		return (ft_strlen(src));
 	}
 }
