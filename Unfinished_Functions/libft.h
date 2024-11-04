@@ -6,7 +6,7 @@
 /*   By: skarras <skarras@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/29 11:49:33 by skarras           #+#    #+#             */
-/*   Updated: 2024/11/04 10:58:55 by skarras          ###   ########.fr       */
+/*   Updated: 2024/11/04 15:48:09 by skarras          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,8 @@
 # include <stdlib.h>
 # include <stdio.h>
 
+void		ft_putstr_fd(char *s, int fd);
+void		ft_putchar_fd(char c, int fd);
 char		*ft_strchr(const char *s, int c);
 size_t		ft_strlen(const char *strn);
 int			ft_isalnum(int c);
