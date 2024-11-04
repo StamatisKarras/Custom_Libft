@@ -3,7 +3,7 @@
 size_t	len(const char *string)
 {
 	size_t	count;
-	
+
 	count = 0;
 	while (string[count])
 		count++;
@@ -28,7 +28,7 @@ char	*ft_strchr(const char *s, int c)
 	return (NULL);
 }
 
-int	main(void)
+/*int	main(void)
 {
 	char	mystring[100] = "bbbbbbbbbbbbbbbbbbbbbbThis Works";
 	char	string[100] = "bbbbbbbbbbbbbbbbbbbbbbThis Works";
@@ -40,4 +40,4 @@ int	main(void)
 	printf("This is the char: %s\n", p1);
 	printf("This is the char: %s\n", p2);
 	return (0);
-}
+}*/

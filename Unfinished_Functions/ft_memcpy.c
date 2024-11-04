@@ -18,7 +18,7 @@ void	*ft_memcpy(void *dest_str, const void * src_str, size_t n)
 	return (dest_str);
 }
 
-int	main(void)
+/*int	main(void)
 {
 	char	Mydest[20] = "Hello0000 People";
 	char	Mysrc[20] = "This is now my array";
@@ -32,4 +32,4 @@ int	main(void)
 	printf("Dest: %s\n", dest);
 	printf("Src: %s\n", src);
 	return (0);
-}
+}*/
