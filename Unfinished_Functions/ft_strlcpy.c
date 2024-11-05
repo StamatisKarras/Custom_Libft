@@ -34,7 +34,7 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t size)
 	}
 }
 
-int	main(void)
+/*int	main(void)
 {
 	char	Mydest[30] = "123";
 	char	Mysrc[30] = "Hello everyone";
@@ -46,4 +46,4 @@ int	main(void)
 	printf("MyDest: %s\nMySource: %s\n", Mydest, Mysrc);
 	printf("Dest: %s\nSource: %s\n", dest, src);
 	return (0);
-}
+}*/
