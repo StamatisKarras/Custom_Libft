@@ -81,7 +81,7 @@ int	main(void)
 	char	**s;
 	size_t	i;
 
-	s = ft_split("Hello!!Everyone!!!", '!');
+	s = ft_split("", '!');
 	i = 0;
 	while (s[i])
 	{
