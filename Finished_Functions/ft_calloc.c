@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_calloc.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: skarras <skarras@student.hive.fi>          +#+  +:+       +#+        */
+/*   By: skarras <skarras@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/01 17:13:15 by skarras           #+#    #+#             */
-/*   Updated: 2024/11/01 17:13:45 by skarras          ###   ########.fr       */
+/*   Updated: 2024/11/08 13:28:50 by skarras          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,7 @@ void	*ft_calloc(size_t nmemb, size_t size)
 	size_t	total;
 	size_t	i;
 
+	i = 0;
 	total = nmemb * size;
 	if (total > 0 && size > 0 && total >= (18446744073709551615UL / size))
 		return (NULL);

@@ -1,5 +1,7 @@
 #include "libft.h"
 
+#include "libft.h"
+
 size_t	ft_strnlen(const char *s, int c);
 size_t	count_split(const char *s, char c);
 
@@ -67,12 +69,9 @@ char	**ft_split(char const *s, char c)
 	count = count_split(s, c);
 	res = (char **) malloc((count + 1) * sizeof(char **));
 	if (!res)
-	{
-		free(res);
 		return (NULL);
-	}
 	q = ft_splitcpy(s, res, c, count);
-	res[q] = '\0';
+	res[q] = NULL;
 	return (res);
 }
 
@@ -81,7 +80,7 @@ int	main(void)
 	char	**s;
 	size_t	i;
 
-	s = ft_split("", '!');
+	s = ft_split("", 'z');
 	i = 0;
 	while (s[i])
 	{

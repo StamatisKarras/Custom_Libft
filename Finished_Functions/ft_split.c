@@ -6,7 +6,7 @@
 /*   By: skarras <skarras@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/05 14:27:26 by skarras           #+#    #+#             */
-/*   Updated: 2024/11/05 16:16:32 by skarras          ###   ########.fr       */
+/*   Updated: 2024/11/08 14:43:55 by skarras          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -76,14 +76,13 @@ char	**ft_split(char const *s, char c)
 	size_t		count;
 	size_t		q;
 
+	if (!s)
+		return (NULL);
 	count = count_split(s, c);
 	res = (char **) malloc((count + 1) * sizeof(char **));
 	if (!res)
-	{
-		free(res);
 		return (NULL);
-	}
 	q = ft_splitcpy(s, res, c, count);
-	res[q] = '\0';
+	res[q] = NULL;
 	return (res);
 }
