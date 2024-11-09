@@ -6,11 +6,22 @@
 /*   By: skarras <skarras@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/06 19:46:26 by skarras           #+#    #+#             */
-/*   Updated: 2024/11/06 19:47:44 by skarras          ###   ########.fr       */
+/*   Updated: 2024/11/09 13:09:47 by skarras          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+
+char	*allocation(int len)
+{
+	char	*arr;
+
+	arr = (char *) malloc((len + 1) * sizeof(char));
+	if (!arr)
+		return (NULL);
+	arr[0] = '0';
+	return (arr);
+}
 
 int	count_n(int c)
 {
@@ -18,6 +29,8 @@ int	count_n(int c)
 	long	nbr;
 
 	nbr = c;
+	if (nbr == 0)
+		return (1);
 	if (nbr < 0)
 	{
 		count = 1;
@@ -42,9 +55,7 @@ char	*ft_itoa(int n)
 
 	nbr = n;
 	size = count_n(nbr);
-	array = (char *) malloc(size * sizeof(char) + 1);
-	if (!array)
-		return (NULL);
+	array = allocation(size);
 	if (nbr < 0)
 	{
 		array[0] = '-';

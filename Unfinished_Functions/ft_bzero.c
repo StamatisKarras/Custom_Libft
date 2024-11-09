@@ -1,10 +1,8 @@
 #include "libft.h"
-#include <stdio.h>
-#include <strings.h>
 
 void	ft_bzero(void *s, size_t n)
 {
-	t_size_t	i;
+	size_t		i;
 	char		*conv;
 
 	i = 0;
@@ -16,7 +14,7 @@ void	ft_bzero(void *s, size_t n)
 	}
 }
 
-int	main(void)
+/*int	main(void)
 {
 	char	myarr[20] = "Hello Everyone";
 	char	arr[20] = "Hello Everyone";
@@ -26,4 +24,4 @@ int	main(void)
 	printf("%s\n", myarr);
 	printf("%s\n", arr);
 	return (0);
-}
+}*/

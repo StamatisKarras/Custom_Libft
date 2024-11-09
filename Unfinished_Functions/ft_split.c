@@ -1,7 +1,5 @@
 #include "libft.h"
 
-#include "libft.h"
-
 size_t	ft_strnlen(const char *s, int c);
 size_t	count_split(const char *s, char c);
 
@@ -23,7 +21,7 @@ size_t	ft_splitcpy(const char *string, char **parr,
 			free(parr[q]);
 			return (0);
 		}
-		ft_strlcpy(parr[q], string, temp_len);
+		ft_strlcpy(parr[q], string, temp_len + 1);
 		string = string + temp_len;
 		q++;
 	}
@@ -41,7 +39,7 @@ size_t	count_split(const char *s, char c)
 		i++;
 	while (s[i])
 	{
-		if (s[i] == c && s[i + 1] != c)
+		if (s[i] == c && (s[i + 1] != c && s[i + 1] != '\0'))
 			count++;
 		i++;
 	}
@@ -67,7 +65,7 @@ char	**ft_split(char const *s, char c)
 	size_t		q;
 
 	count = count_split(s, c);
-	res = (char **) malloc((count + 1) * sizeof(char **));
+	res = (char **) malloc((count + 1) * sizeof(char *));
 	if (!res)
 		return (NULL);
 	q = ft_splitcpy(s, res, c, count);

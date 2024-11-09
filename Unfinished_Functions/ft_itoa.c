@@ -1,11 +1,24 @@
 #include "libft.h"
 
-int	count_n(int	c)
+char	*allocation(int	len)
+{
+	char	*arr;
+
+	arr = (char *) malloc((len + 1) * sizeof(char));
+	if (!arr)
+		return (NULL);
+	arr[0] = '0';
+	return (arr);
+}
+
+int	count_n(int c)
 {
 	int		count;
 	long	nbr;
 
 	nbr = c;
+	if (nbr == 0)
+		return (1);
 	if (nbr < 0)
 	{
 		count = 1;
@@ -21,7 +34,7 @@ int	count_n(int	c)
 	return (count);
 }
 
-char *ft_itoa(int n)
+char	*ft_itoa(int n)
 {
 	char	*array;
 	int		size;
@@ -30,9 +43,7 @@ char *ft_itoa(int n)
 
 	nbr = n;
 	size = count_n(nbr);
-	array = (char *) malloc(size * sizeof(char) + 1);
-	if (!array)
-		return (NULL);
+	array = allocation(size);
 	if (nbr < 0)
 	{
 		array[0] = '-';

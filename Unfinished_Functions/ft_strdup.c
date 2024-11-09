@@ -1,15 +1,5 @@
 #include "libft.h"
 
-size_t	ft_strlen(const char *strn)
-{
-	size_t	i;
-
-	i = 0;
-	while (strn[i])
-		i++;
-	return (i);
-}
-
 char	*ft_strdup(const char *s)
 {
 	size_t	i;
@@ -28,7 +18,7 @@ char	*ft_strdup(const char *s)
 	return (p);
 }
 
-int	main(void)
+/*int	main(void)
 {
 	char	str[100] = "a";
 	char	*myp;
@@ -38,4 +28,4 @@ int	main(void)
 	p = strdup(str);
 	printf("My dup: %s\nNormal duo: %s\n", myp, p);
 	return (0);
-}
+}*/

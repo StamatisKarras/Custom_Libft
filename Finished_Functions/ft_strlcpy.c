@@ -6,7 +6,7 @@
 /*   By: skarras <skarras@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/31 12:08:55 by skarras           #+#    #+#             */
-/*   Updated: 2024/11/08 14:40:50 by skarras          ###   ########.fr       */
+/*   Updated: 2024/11/09 10:58:17 by skarras          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t size)
 		return (ft_strlen(src));
 	else
 	{
-		while (src[i] && i < size)
+		while (src[i] && i < size - 1)
 		{
 			dst[i] = src[i];
 			i++;
