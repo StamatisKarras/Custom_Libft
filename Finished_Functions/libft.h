@@ -6,7 +6,7 @@
 /*   By: skarras <skarras@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/29 11:49:33 by skarras           #+#    #+#             */
-/*   Updated: 2024/11/08 12:26:29 by skarras          ###   ########.fr       */
+/*   Updated: 2024/11/09 14:26:09 by skarras          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,9 +23,11 @@ typedef struct s_list
 }	t_list;
 
 t_list		*ft_lstnew(void *content);
+t_list		*ft_lstlast(t_list *lst);
 size_t		ft_strlcat(char *dst, const char *src, size_t size);
 size_t		ft_strlcpy(char *dst, const char *src, size_t size);
 size_t		ft_strlen(const char *strn);
+int			ft_lstsize(t_list *lst);
 int			ft_atoi(const char *str);
 int			ft_isalnum(int c);
 int			ft_tolower(int c);

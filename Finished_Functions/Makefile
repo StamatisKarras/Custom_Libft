@@ -40,7 +40,9 @@ SRC = ft_atoi.c \
 	  ft_toupper.c
 
 BONUS_SRC = ft_lstnew.c \
-			ft_lstadd_front.c
+			ft_lstadd_front.c \
+			ft_lstsize.c \
+			ft_lstlast.c
 
 BONUS_OBJ = $(BONUS_SRC:.c=.o)
 OBJ = $(SRC:.c=.o)

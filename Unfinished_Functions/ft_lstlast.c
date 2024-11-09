@@ -14,13 +14,13 @@ t_list	*ft_lstlast(t_list *lst)
 	return (tmp);
 }
 
-int	main(void)
+/*int	main(void)
 {
 	t_list	*a;
 	t_list	*b;
 	t_list	*c;
 	t_list	*d;
-	char *content;
+	char 	*content;
 
 	a = ft_lstnew("Hello");
 	b = ft_lstnew("Not hello");
@@ -31,4 +31,4 @@ int	main(void)
 	content = (char *) d->content;
 	printf("%s\n", content);
 	return (0);
-}
+}*/

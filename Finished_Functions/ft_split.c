@@ -6,7 +6,7 @@
 /*   By: skarras <skarras@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/05 14:27:26 by skarras           #+#    #+#             */
-/*   Updated: 2024/11/09 13:15:50 by skarras          ###   ########.fr       */
+/*   Updated: 2024/11/09 14:18:45 by skarras          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -76,6 +76,8 @@ char	**ft_split(char const *s, char c)
 	size_t		count;
 	size_t		q;
 
+	if (!s)
+		return (NULL);
 	count = count_split(s, c);
 	res = (char **) malloc((count + 1) * sizeof(char *));
 	if (!res)
