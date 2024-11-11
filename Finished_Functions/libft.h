@@ -6,7 +6,7 @@
 /*   By: skarras <skarras@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/29 11:49:33 by skarras           #+#    #+#             */
-/*   Updated: 2024/11/09 14:26:09 by skarras          ###   ########.fr       */
+/*   Updated: 2024/11/11 20:17:39 by skarras          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -60,5 +60,6 @@ void		*ft_memcpy(void *dest_str, const void *src_str, size_t n);
 void		*ft_memmove(void *dest_str, const void *src_str, size_t n);
 void		*ft_memset(void *str, int c, size_t n);
 void		ft_lstadd_front(t_list **lst, t_list *new);
+void		ft_lstadd_back(t_list **lst, t_list *new);
 
 #endif
