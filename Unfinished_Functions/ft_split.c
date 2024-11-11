@@ -21,7 +21,8 @@ size_t	ft_splitcpy(const char *string, char **parr,
 			free(parr[q]);
 			return (0);
 		}
-		ft_strlcpy(parr[q], string, temp_len + 1);
+		ft_memcpy(parr[q], string, temp_len);
+		parr[q][temp_len] = '\0';
 		string = string + temp_len;
 		q++;
 	}
@@ -78,7 +79,7 @@ int	main(void)
 	char	**s;
 	size_t	i;
 
-	s = ft_split("", 'z');
+	s = ft_split("Hello!Hello!HEllo", '!');
 	i = 0;
 	while (s[i])
 	{

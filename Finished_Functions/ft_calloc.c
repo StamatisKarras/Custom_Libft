@@ -6,7 +6,7 @@
 /*   By: skarras <skarras@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/01 17:13:15 by skarras           #+#    #+#             */
-/*   Updated: 2024/11/08 13:28:50 by skarras          ###   ########.fr       */
+/*   Updated: 2024/11/10 21:07:51 by skarras          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ void	*ft_calloc(size_t nmemb, size_t size)
 	p = (void *) malloc(total);
 	if (!p)
 		return (NULL);
-	while (i < nmemb)
+	while (i < total)
 		p[i++] = 0;
 	return (p);
 }
