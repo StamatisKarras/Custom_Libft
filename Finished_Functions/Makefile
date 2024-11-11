@@ -48,7 +48,7 @@ BONUS_SRC = ft_lstnew.c \
 BONUS_OBJ = $(BONUS_SRC:.c=.o)
 OBJ = $(SRC:.c=.o)
 
-all: $(NAME)
+all: $(NAME) bonus
 
 $(NAME): $(OBJ)
 	ar rcs $(NAME) $(OBJ)

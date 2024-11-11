@@ -65,6 +65,8 @@ char	**ft_split(char const *s, char c)
 	size_t		count;
 	size_t		q;
 
+	if (!s)
+		return (NULL);
 	count = count_split(s, c);
 	res = (char **) malloc((count + 1) * sizeof(char *));
 	if (!res)
@@ -79,7 +81,7 @@ int	main(void)
 	char	**s;
 	size_t	i;
 
-	s = ft_split("Hello!Hello!HEllo", '!');
+	s = ft_split("!!!!!!!!!", '!');
 	i = 0;
 	while (s[i])
 	{

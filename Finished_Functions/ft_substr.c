@@ -6,7 +6,7 @@
 /*   By: skarras <skarras@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/02 17:35:19 by codespace         #+#    #+#             */
-/*   Updated: 2024/11/10 21:09:05 by skarras          ###   ########.fr       */
+/*   Updated: 2024/11/11 11:45:30 by skarras          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,8 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	char	*sub;
 	size_t	i;
 
+	if (!s)
+		return (NULL);
 	if (ft_strlen(s) <= start)
 	{
 		return (ft_strdup(""));
