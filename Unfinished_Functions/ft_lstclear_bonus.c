@@ -13,6 +13,6 @@ void	ft_lstclear(t_list **lst, void (*del)(void *))
 		del((*lst)->next);
 		*lst = tmp;
 	}
-	free
+	free(lst);
 	*lst = NULL;
 }
