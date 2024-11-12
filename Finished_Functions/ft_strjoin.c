@@ -6,7 +6,7 @@
 /*   By: skarras <skarras@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/04 08:09:49 by codespace         #+#    #+#             */
-/*   Updated: 2024/11/04 10:43:57 by skarras          ###   ########.fr       */
+/*   Updated: 2024/11/12 10:00:23 by skarras          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,8 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	int		i;
 	int		j;
 
+	if (!s1 || !s2)
+		return (NULL);
 	total = ft_strlen(s1) + ft_strlen(s2);
 	nstr = (char *) malloc(total + 1);
 	if (!nstr)
