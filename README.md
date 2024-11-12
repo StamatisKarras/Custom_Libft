@@ -1,1 +1,1 @@
-# Custom_Libft
+My recreation of some standard C functions.
