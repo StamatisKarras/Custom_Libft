@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: skarras <skarras@student.42.fr>            +#+  +:+       +#+        */
+/*   By: skarras <skarras@student.hive.fi>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/29 11:49:33 by skarras           #+#    #+#             */
-/*   Updated: 2024/11/11 12:25:05 by skarras          ###   ########.fr       */
+/*   Updated: 2024/11/12 11:57:37 by skarras          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,6 @@
 
 # include <unistd.h>
 # include <stdlib.h>
-#include <stdio.h>
 
 typedef struct s_list
 {
@@ -23,12 +22,12 @@ typedef struct s_list
 	struct s_list	*next;
 }	t_list;
 
-int			ft_lstsize(t_list *lst);
 t_list		*ft_lstnew(void *content);
 t_list		*ft_lstlast(t_list *lst);
 size_t		ft_strlcat(char *dst, const char *src, size_t size);
 size_t		ft_strlcpy(char *dst, const char *src, size_t size);
 size_t		ft_strlen(const char *strn);
+int			ft_lstsize(t_list *lst);
 int			ft_atoi(const char *str);
 int			ft_isalnum(int c);
 int			ft_tolower(int c);
@@ -61,5 +60,7 @@ void		*ft_memcpy(void *dest_str, const void *src_str, size_t n);
 void		*ft_memmove(void *dest_str, const void *src_str, size_t n);
 void		*ft_memset(void *str, int c, size_t n);
 void		ft_lstadd_front(t_list **lst, t_list *new);
+void		ft_lstadd_back(t_list **lst, t_list *new);
+void		ft_lstdelone(t_list *lst, void (*del)(void *));
 
 #endif
