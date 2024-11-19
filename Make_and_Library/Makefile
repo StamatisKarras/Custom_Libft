@@ -59,23 +59,23 @@ OBJ = $(SRC:.c=.o)
 all: $(NAME)
 
 $(NAME): $(OBJ)
-	ar rcs $(NAME) $(OBJ)
+	@ar rcs $(NAME) $(OBJ)
 
 %.o: %.c $(HEADER)
-	$(CC) $(CFLAGS) -c $< -o $@
+	@$(CC) $(CFLAGS) -c $< -o $@
 
 bonus: .bonus
 
 .bonus: $(OBJ) $(BONUS_OBJ)
-		ar rcs $(NAME) $(OBJ) $(BONUS_OBJ)
+		@ar rcs $(NAME) $(OBJ) $(BONUS_OBJ)
 		@touch .bonus
 
 clean:
-	rm -f $(OBJ) $(BONUS_OBJ)
-	rm -rf .bonus
+	@rm -f $(OBJ) $(BONUS_OBJ)
+	@rm -rf .bonus
 
 fclean: clean
-	rm -f $(NAME)
+	@rm -f $(NAME)
 
 re: fclean all
 
