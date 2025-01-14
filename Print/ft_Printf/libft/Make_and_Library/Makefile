@@ -56,11 +56,12 @@ SRC = $(Conv_Src) $(Is_Src) $(List_Src) $(Memory_Src) $(Print_Src) $(Strings_Src
 BONUS_OBJ = $(List_Src:.c=.o)
 OBJ = $(SRC:.c=.o)
 
+.SILENT:
+
 all: $(NAME)
 
 $(NAME): $(OBJ)
 	@ar rcs $(NAME) $(OBJ)
-	@$(MAKE) -C ../Print/ft_Printf/
 
 %.o: %.c $(HEADER)
 	@$(CC) $(CFLAGS) -c $< -o $@
@@ -73,12 +74,10 @@ bonus: .bonus
 
 clean:
 	@rm -f $(OBJ) $(BONUS_OBJ)
-	@$(MAKE) -C ../Print/ft_Printf/ clean
 	@rm -rf .bonus
 
 fclean: clean
 	@rm -f $(NAME)
-	@$(MAKE) -C ../Print/ft_Printf/ fclean
 
 re: fclean all
 
