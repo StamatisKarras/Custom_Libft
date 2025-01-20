@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_toupper.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: skarras <skarras@student.42.fr>            +#+  +:+       +#+        */
+/*   By: skarras <skarras@student.hive.fi>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/31 13:21:57 by skarras           #+#    #+#             */
-/*   Updated: 2024/11/11 20:18:17 by skarras          ###   ########.fr       */
+/*   Updated: 2025/01/20 13:25:22 by skarras          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../../libft.h"
 
 int	ft_toupper(int c)
 {

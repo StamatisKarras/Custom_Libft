@@ -6,11 +6,11 @@
 /*   By: skarras <skarras@student.hive.fi>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/25 15:38:35 by skarras           #+#    #+#             */
-/*   Updated: 2024/11/25 15:38:36 by skarras          ###   ########.fr       */
+/*   Updated: 2025/01/20 13:21:45 by skarras          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_printf.h"
+#include "../libft.h"
 
 int	print_hex(unsigned long long nb, char type)
 {

@@ -6,11 +6,11 @@
 /*   By: skarras <skarras@student.hive.fi>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/18 08:45:15 by skarras           #+#    #+#             */
-/*   Updated: 2024/11/25 14:20:50 by skarras          ###   ########.fr       */
+/*   Updated: 2025/01/20 13:23:30 by skarras          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_printf.h"
+#include "../libft.h"
 
 int	strlen_count(const char *s)
 {

@@ -6,11 +6,11 @@
 /*   By: skarras <skarras@student.hive.fi>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/18 08:44:17 by skarras           #+#    #+#             */
-/*   Updated: 2024/11/18 08:51:25 by skarras          ###   ########.fr       */
+/*   Updated: 2025/01/20 13:23:30 by skarras          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_printf.h"
+#include "../libft.h"
 
 int	print_usnigned(unsigned int n, int count)
 {

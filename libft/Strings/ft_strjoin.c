@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strjoin.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: skarras <skarras@student.42.fr>            +#+  +:+       +#+        */
+/*   By: skarras <skarras@student.hive.fi>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/04 08:09:49 by codespace         #+#    #+#             */
-/*   Updated: 2024/11/12 10:00:23 by skarras          ###   ########.fr       */
+/*   Updated: 2025/01/20 13:25:22 by skarras          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../../libft.h"
 
 char	*ft_strjoin(char const *s1, char const *s2)
 {

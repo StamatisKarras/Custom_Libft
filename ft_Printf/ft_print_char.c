@@ -6,11 +6,11 @@
 /*   By: skarras <skarras@student.hive.fi>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/18 08:43:15 by skarras           #+#    #+#             */
-/*   Updated: 2024/11/26 09:47:58 by skarras          ###   ########.fr       */
+/*   Updated: 2025/01/20 13:19:47 by skarras          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_printf.h"
+#include "../libft.h"
 
 int	print_char(int c)
 {

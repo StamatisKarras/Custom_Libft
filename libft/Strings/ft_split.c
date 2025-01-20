@@ -3,16 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_split.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: skarras <skarras@student.42.fr>            +#+  +:+       +#+        */
+/*   By: skarras <skarras@student.hive.fi>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/05 14:27:26 by skarras           #+#    #+#             */
-/*   Updated: 2024/11/11 12:11:34 by skarras          ###   ########.fr       */
+/*   Updated: 2025/01/20 13:25:22 by skarras          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
-
-#include "libft.h"
+#include "../../libft.h"
 
 size_t	ft_strnlen(const char *s, int c);
 size_t	count_split(const char *s, char c);

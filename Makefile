@@ -1,17 +1,15 @@
 NAME = libft.a
 
 CC = cc
-CFLAGS = -Wall -Wextra -Werror -I$(LIBFT_PATH)/Library
+CFLAGS = -Wall -Wextra -Werror
 
-HEADER = $(LIBFT_PATH)/Library/ \
-		 $(GNT_PATH) \
-		 $(PRINTF_PATH)
+HEADER = libft.h
 
-GNT_PATH = ./get_next_line/
+GNT_PATH = ./get_next_line
 
 LIBFT_PATH = ./libft
 
-PRINTF_PATH = ./ft_Printf/
+PRINTF_PATH = ./ft_Printf
 
 Conv_Src = $(LIBFT_PATH)/Convert/ft_atoi.c \
 		  $(LIBFT_PATH)/Convert/ft_itoa.c \
@@ -59,21 +57,21 @@ Strings_Src = $(LIBFT_PATH)/Strings/ft_split.c \
 			  $(LIBFT_PATH)/Strings/ft_strtrim.c \
 			  $(LIBFT_PATH)/Strings/ft_substr.c
 
-Get_next_line_Src = $(GNT_PATH) get_next_line.c \
-					$(GNT_PATH) get_next_line_utils.c
+Get_next_line_Src = $(GNT_PATH)/get_next_line.c \
+		    	    $(GNT_PATH)/get_next_line_utils.c
 
-Printf_Src = $(PRINTF_PATH)ft_print_char.c \
-			 $(PRINTF_PATH)ft_printf.c \
-			 $(PRINTF_PATH)ft_printf_normal.c \
-			 $(PRINTF_PATH)ft_printf_utils.c \
-			 $(PRINTF_PATH)ft_print_hex.c \
-			 $(PRINTF_PATH)ft_print_pointer.c \
-			 $(PRINTF_PATH)ft_print_unsigned.c \
-			 $(PRINTF_PATH)ft_putnbr_count.c \
-			 $(PRINTF_PATH)ft_putstr_count.c \
-			 $(PRINTF_PATH)ft_strlen_count.c
+Printf_Src = $(PRINTF_PATH)/ft_print_char.c \
+			 $(PRINTF_PATH)/ft_printf.c \
+			 $(PRINTF_PATH)/ft_printf_normal.c \
+			 $(PRINTF_PATH)/ft_printf_utils.c \
+			 $(PRINTF_PATH)/ft_print_hex.c \
+			 $(PRINTF_PATH)/ft_print_pointer.c \
+			 $(PRINTF_PATH)/ft_print_unsigned.c \
+			 $(PRINTF_PATH)/ft_putnbr_count.c \
+			 $(PRINTF_PATH)/ft_putstr_count.c \
+			 $(PRINTF_PATH)/ft_strlen_count.c
 
-SRC = $(Conv_Src) $(Is_Src) $(List_Src) $(Memory_Src) $(Print_Src) $(Strings_Src) $(Print_Src)
+SRC = $(Conv_Src) $(Is_Src) $(List_Src) $(Memory_Src) $(Print_Src) $(Strings_Src) $(Printf_Src) $(Get_next_line_Src)
 
 BONUS_OBJ = $(List_Src:.c=.o)
 OBJ = $(SRC:.c=.o)

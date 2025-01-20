@@ -6,11 +6,15 @@
 /*   By: skarras <skarras@student.hive.fi>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/20 10:36:02 by skarras           #+#    #+#             */
-/*   Updated: 2025/01/20 10:38:55 by skarras          ###   ########.fr       */
+/*   Updated: 2025/01/20 13:24:05 by skarras          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "get_next_line.h"
+#include "../libft.h"
+
+static void		read_to_buff(t_buffer *buffer);
+static size_t	next_index(t_buffer *buffer);
+static char		*flush_and_combine(t_buffer *buffer, size_t to_flush, char *line);
 
 char	*get_next_line(int fd)
 {
@@ -90,6 +94,6 @@ static	char	*flush_and_combine(t_buffer *buffer,
 	temp[to_flush] = '\0';
 	buffer->unflushed_bytes -= to_flush;
 	buffer->flushed_bytes += to_flush;
-	line = ft_strjoin(line, temp);
+	line = ft_strjoin_and_free(line, temp);
 	return (line);
 }

@@ -6,13 +6,13 @@
 /*   By: skarras <skarras@student.hive.fi>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/20 10:35:10 by skarras           #+#    #+#             */
-/*   Updated: 2025/01/20 10:40:14 by skarras          ###   ########.fr       */
+/*   Updated: 2025/01/20 13:24:02 by skarras          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "get_next_line.h"
+#include "../libft.h"
 
-char	*ft_strjoin(char *s1, char *s2)
+char	*ft_strjoin_and_free(char *s1, char *s2)
 {
 	char	*new_str;
 	size_t	i;
