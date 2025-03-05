@@ -6,7 +6,7 @@
 /*   By: skarras <skarras@student.hive.fi>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/05 11:23:07 by skarras           #+#    #+#             */
-/*   Updated: 2025/03/05 11:31:58 by skarras          ###   ########.fr       */
+/*   Updated: 2025/03/05 13:55:31 by skarras          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,6 +38,11 @@ typedef struct s_buffer {
 	size_t	unflushed_bytes;
 	char	memory[BUFFER_SIZE];
 }	t_buffer;
+
+typedef struct s_line {
+	char			*line;
+	ssize_t			new_line_index;
+}	t_line;
 
 t_list		*ft_lstnew(void *content);
 t_list		*ft_lstlast(t_list *lst);

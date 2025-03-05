@@ -6,7 +6,7 @@
 /*   By: skarras <skarras@student.hive.fi>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/20 10:36:02 by skarras           #+#    #+#             */
-/*   Updated: 2025/03/05 11:36:33 by skarras          ###   ########.fr       */
+/*   Updated: 2025/03/05 13:55:15 by skarras          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,10 +20,9 @@ static char		*flush_and_combine(t_buffer *buffer,
 char	*get_next_line(int fd)
 {
 	static t_buffer	buffer;
-	char			*line;
-	ssize_t			new_line_index;
+	t_line			l;
 
-	line = NULL;
+	l.line = NULL;
 	if (buffer.unflushed_bytes == 0 && buffer.flushed_bytes == 0)
 	{
 		buffer.fd = fd;
@@ -31,18 +30,18 @@ char	*get_next_line(int fd)
 	}
 	while (1)
 	{
-		new_line_index = next_index(&buffer);
-		if (new_line_index >= 0)
-			return (flush_and_combine(&buffer, new_line_index + 1, line));
+		l.new_line_index = next_index(&buffer);
+		if (l.new_line_index >= 0)
+			return (flush_and_combine(&buffer, l.new_line_index + 1, l.line));
 		if (buffer.eof == 1 && buffer.unflushed_bytes > 0)
-			return (flush_and_combine(&buffer, buffer.unflushed_bytes, line));
+			return (flush_and_combine(&buffer, buffer.unflushed_bytes, l.line));
 		if (buffer.eof == 1 && buffer.unflushed_bytes == 0)
 		{
-			if (line == NULL)
+			if (l.line == NULL)
 				ft_memset(&buffer, 0, sizeof(t_buffer));
-			return (line);
+			return (l.line);
 		}
-		line = flush_and_combine(&buffer, buffer.unflushed_bytes, line);
+		l.line = flush_and_combine(&buffer, buffer.unflushed_bytes, l.line);
 		read_to_buff(&buffer);
 	}
 }
